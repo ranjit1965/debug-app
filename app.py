@@ -4,8 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    # Intentional error: 'messege' is not defined
-    return messege
+    return "Hello! This Python Flask app is running in Podman."
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
